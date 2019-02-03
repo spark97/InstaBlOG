@@ -1,0 +1,18 @@
+<html>
+  <body>
+              <div class="container" *ngFor = "let blog of blogs; let i = index">
+                <ul class="blog-post columns-2">
+                  <li>
+                    <img [src]=blog.img />
+                    <h3>{{blog.title}}</h3>
+                    <p>{{blog.description}}</p>
+                    <a class="button" [routerLink]="['/blog', i]">Read More</a>
+                  </li>
+                </ul>
+              </div>
+    </body>
+    <footer>
+                Copyright © Harshit Shah, 2019
+    </footer>
+
+</html>

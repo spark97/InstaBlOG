@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: .5px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 600px;
+  margin: 50px auto;
+}
+
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post:first-child {
+  flex: 0 0 100%;
+  .post-image-container {
+    height: 280px;
+  }
+}
+
+.post {
+  flex: 0 0 48%;
+  margin: 0 0 20px;
+  .post-image-container {
+    height: 200px;
+  }
+}
+
+.post-image-container {
+  position: relative;
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.post-image-container-1 {
+  background-image: url(https://images.unsplash.com/photo-1546029115-712217181a58?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+
+.post-image-container-2 {
+  background-image: url(https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ)
+}
+
+.post-image-container-3 {
+  background-image: url(https://images.unsplash.com/photo-1533738699159-d0c68059bb61?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ)
+}
+
+.post-image-container-4 {
+  background-image: url(https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ)
+}
+
+.post-image-container-5 {
+  background-image: url(https://images.unsplash.com/photo-1529101091764-c3526daf38fe?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ)
+}
+
+.post-image-container a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.post-image {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute
+}
+
+.post-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.post-author {
+  color: #444;
+}
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 90%;
+  }
+  
+  .container .post {
+    flex: 0 0 100%;
+    margin: 0 0 40px;
+    .post-image-container {
+      height: 250px;
+    }
+  }
+}
